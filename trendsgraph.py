@@ -5,7 +5,7 @@ plt.style.use('seaborn')
 import ImportAndClean
 
 def trends():
-    crimes = pd.read_csv(r"C:\Users\parvs\Downloads\Data Sets\Chicago_Crimes_2012_to_2017.csv")
+    crimes = pd.read_csv(r"C:\Users\suran\Desktop\School\1 UNIVERSITY\BENNETT\CSET204 Prob and Stats\Hackathon Predictive policing\Hackathon Predictive policing\Chicago_Crimes_2012_to_2017.csv\Chicago_Crimes_2012_to_2017.csv")
 
     # print('working')
     # print('Dataset Shape before drop_duplicate : ', crimes.shape)

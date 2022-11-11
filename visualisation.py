@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 # plt.style.use('seaborn')
 
-crimes = pd.read_csv(r"C:\Users\parvs\Downloads\Data Sets\Chicago_Crimes_2012_to_2017.csv")
+crimes = pd.read_csv(r"C:\Users\suran\Desktop\School\1 UNIVERSITY\BENNETT\CSET204 Prob and Stats\Hackathon Predictive policing\Hackathon Predictive policing\Chicago_Crimes_2012_to_2017.csv\Chicago_Crimes_2012_to_2017.csv")
 # trends visualised
 def visualize():
     data_feed = ['IUCR  == "0820" or IUCR == "0810"', 'IUCR  == "0460" or IUCR == "0486"', 'IUCR  == "1320"']
