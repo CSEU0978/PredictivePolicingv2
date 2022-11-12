@@ -4,7 +4,6 @@ import numpy as np
 import pandas as pd
 
 #plt.style.use('seaborn')
-#from sklearn.tree import DecisionTreeRegressor as dtr
 
 
 def cleaning():
@@ -16,14 +15,16 @@ def cleaning():
 
     #print(crimes_filt.describe(include='all'))
     # print('working')
-    # print('Dataset Shape before drop_duplicate : ', crimes.shape)
+    print('Dataset Shape before drop_duplicate : ', crimes.shape)
     #crimes.drop_duplicates(subset=['ID', 'Case Number'], inplace=True)
-    # print('Dataset Shape after drop_duplicate: ', crimes.shape)
+    print('Dataset Shape after drop_duplicate: ', crimes.shape)
     #crimes.drop(['Unnamed: 0', 'Case Number','Updated On','Year', 'FBI Code', 'Beat','Ward','Community Area', 'Location'], inplace=True, axis=1)
     print(crimes_filt.head(5))
 
-    #0crimes_filt.Date = pd.to_datetime(crimes_filt.Date, format='%m/%d/%Y %I:%M:%S %p')
-    #crimes_filt.index = pd.DatetimeIndex(crimes_filt.Date)
-    # print(crimes.shape, "\n", crimes.info())
+    crimes_filt.Date = pd.to_datetime(crimes_filt.Date, format='%m/%d/%Y %I:%M:%S %p')
+    crimes_filt.index = pd.DatetimeIndex(crimes_filt.Date)
+    print(crimes.shape, "\n", crimes.info())
 
     return crimes_filt
+
+cleaning()
