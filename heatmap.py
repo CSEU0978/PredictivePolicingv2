@@ -84,7 +84,7 @@ crimes.iloc[(crimes[['Longitude']].values > -87.5).flatten(), crimes.columns=='L
 crimes.iloc[(crimes[['Latitude']].values < 41.60).flatten(),  crimes.columns=='Latitude'] = 0.0
 crimes.iloc[(crimes[['Latitude']].values > 42.05).flatten(),  crimes.columns=='Latitude'] = 0.0
 crimes.replace({'Latitude': 0.0, 'Longitude': 0.0}, np.nan, inplace=True)
-crimes.dropna(inplace=True)
+crimes.dropna(inplace=True)#drops null value rows
 
 
 crimes_new = crimes[(crimes['Primary Type'] == 'THEFT') | (crimes['Primary Type'] == 'CRIMINAL DAMAGE') | (crimes['Primary Type'] == 'BATTERY')]
